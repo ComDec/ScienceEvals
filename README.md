@@ -1,33 +1,14 @@
-# OpenAI Evals
+# ScienceEvals: An OpenAI Evals based Tool for Language Models Evaluation in Scientific Contexts
+ScienceEvals is a fork of OpenAI Evals, a framework for evaluating large language models (LLMs) specific for Scientific Contexts. 
 
-Evals provide a framework for evaluating large language models (LLMs) or systems built using LLMs. We offer an existing registry of evals to test different dimensions of OpenAI models and the ability to write your own custom evals for use cases you care about. You can also use your data to build private evals which represent the common LLMs patterns in your workflow without exposing any of that data publicly.
+> Evals provide a framework for evaluating large language models (LLMs) or systems built using LLMs. We offer an existing registry of evals to test different dimensions of OpenAI models and the ability to write your own custom evals for use cases you care about. You can also use your data to build private evals which represent the common LLMs patterns in your workflow without exposing any of that data publicly.
 
-If you are building with LLMs, creating high quality evals is one of the most impactful things you can do. Without evals, it can be very difficult and time intensive to understand how different model versions might affect your use case. In the words of [OpenAI's President Greg Brockman](https://twitter.com/gdb/status/1733553161884127435):
-
-<img width="596" alt="https://x.com/gdb/status/1733553161884127435?s=20" src="https://github.com/openai/evals/assets/35577566/ce7840ff-43a8-4d88-bb2f-6b207410333b">
 
 ## Setup
 
 To run evals, you will need to set up and specify your [OpenAI API key](https://platform.openai.com/account/api-keys). After you obtain an API key, specify it using the [`OPENAI_API_KEY` environment variable](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key). Please be aware of the [costs](https://openai.com/pricing) associated with using the API when running evals. You can also run and create evals using [Weights & Biases](https://wandb.ai/wandb_fc/openai-evals/reports/OpenAI-Evals-Demo-Using-W-B-Prompts-to-Run-Evaluations--Vmlldzo0MTI4ODA3).
 
 **Minimum Required Version: Python 3.9**
-
-### Downloading evals
-
-Our evals registry is stored using [Git-LFS](https://git-lfs.com/). Once you have downloaded and installed LFS, you can fetch the evals (from within your local copy of the evals repo) with:
-```sh
-cd evals
-git lfs fetch --all
-git lfs pull
-```
-
-This will populate all the pointer files under `evals/registry/data`.
-
-You may just want to fetch data for a select eval. You can achieve this via:
-```sh
-git lfs fetch --include=evals/registry/data/${your eval}
-git lfs pull
-```
 
 ### Making evals
 
